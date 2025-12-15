@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>For My Dearest Best Friend ❤️</title>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            /* Cute Pastel Color Palette */
+            --color-bg-light: #f7f3f9; /* Very light lavender/off-white */
+            --color-pink: #ffc0d9;    /* Light Bubblegum Pink */
+            --color-blue: #a0d8f0;    /* Soft Sky Blue */
+            --color-yellow: #fdf5b4;  /* Pale Lemon Yellow */
+            --color-green: #c0e6b5;   /* Mint Green */
+            --color-text-dark: #6e4e7c; /* Darker text for readability (Plum) */
+            --color-text-soft: #9c89b8; /* Softer accent text */
+        }
+
+        body {
+            font-family: 'Quicksand', sans-serif;
+            background-color: var(--color-bg-light);
+            color: var(--color-text-dark);
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            line-height: 1.6;
+            background-image: 
+                radial-gradient(circle at 10% 10%, var(--color-pink) 1px, transparent 0),
+                radial-gradient(circle at 90% 90%, var(--color-blue) 1px, transparent 0),
+                radial-gradient(circle at 50% 0%, var(--color-yellow) 1px, transparent 0),
+                radial-gradient(circle at 0% 50%, var(--color-green) 1px, transparent 0);
+            background-size: 40px 40px;
+            animation: pulseBg 30s infinite alternate;
+        }
+
+        @keyframes pulseBg {
+            0% { background-position: 0 0; }
+            100% { background-position: 20px 20px; }
+        }
+
+        .container {
+            background-color: #ffffff; /* White center for the main content */
+            padding: 40px;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05), 0 0 0 10px var(--color-pink); /* Soft shadow and cute border */
+            max-width: 800px;
+            width: 90%;
+            text-align: center;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .container:hover {
+            transform: scale(1.01);
+        }
+
+        h1 {
+            color: var(--color-text-dark);
+            font-size: 2.5em;
+            margin-bottom: 20px;
+            text-shadow: 1px 1px 0 var(--color-pink);
+        }
+
+        .message-box {
+            background-color: var(--color-yellow);
+            padding: 30px;
+            border-radius: 15px;
+            border: 2px dashed var(--color-text-soft);
+            text-align: left;
+            min-height: 300px;
+            white-space: pre-wrap; /* Preserves formatting like line breaks */
+            overflow-wrap: break-word; /* Prevents long words from breaking layout */
+            font-size: 1.1em;
+        }
+
+        /* Heart Icon Style */
+        .heart {
+            color: var(--color-pink);
+            font-size: 1.5em;
+            animation: beat 1.5s infinite;
+            display: inline-block;
+            margin: 0 5px;
+        }
+
+        @keyframes beat {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.2); }
+        }
+
+        .signature {
+            margin-top: 30px;
+            font-style: italic;
+            color: var(--color-text-soft);
+            font-size: 1.2em;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>A Little Something For You <span class="heart">❤️</span></h1>
+        
+        <div class="message-box" id="messageBox">
+            My Dearest [Friend's Name],
+
+            Words truly fail me when I try to express just how much your friendship means to me. You are the sunshine on my cloudy days, the one person who can make me laugh until my stomach hurts, and the most reliable confidant I could ever ask for. Every memory we share, from the silliest inside jokes to the quiet, heartfelt conversations, is something I treasure deeply. You have this incredible ability to light up any room you enter, and your kindness is a gift to everyone around you. Thank you for being you, for understanding me without judgment, and for making this crazy journey of life so much better. I am so incredibly lucky to call you my best friend. I hope this little page brings a smile to your face, just like you bring one to mine every single day.
+
+            Love always,
+            [Your Name]
+        </div>
+
+        <p class="signature">With all my love and endless gratitude.</p>
+    </div>
+
+    <script>
+        // Simple JS for a subtle effect if you want one later
+        document.addEventListener('DOMContentLoaded', () => {
+            const messageBox = document.getElementById('messageBox');
+            messageBox.style.opacity = 0;
+            // Fade in the message for a cute effect
+            setTimeout(() => {
+                messageBox.style.transition = 'opacity 2s ease-in';
+                messageBox.style.opacity = 1;
+            }, 500);
+        });
+    </script>
+</body>
+</html>
